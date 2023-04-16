@@ -1,0 +1,46 @@
+.galleryHeading {
+  text-align: center;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+}
+.galleryText {
+  text-align: center;
+  position: relative;
+  animation-name: text;
+  animation-duration: 9s;
+}
+
+.galleryImages {
+  text-align: center;
+  position: relative;
+  animation-name: images;
+  animation-duration: 12s;
+}
+
+@keyframes example {
+  0% {
+    top: -100px;
+  }
+  25% {
+    top: 0px;
+  }
+}
+
+@keyframes text {
+  0% {
+    right: -1000px;
+  }
+  25% {
+    right: 0px;
+  }
+}
+
+@keyframes images {
+  0% {
+    left: -1000px;
+  }
+  25% {
+    left: 0px;
+  }
+}
