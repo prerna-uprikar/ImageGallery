@@ -2,11 +2,11 @@ import React from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { getImages, getSearchImages } from "./utility";
-import { Gallery, Image, Header, SearchBoxInput } from "./StyledComponents";
+import { Gallery, Image, Header } from "./StyledComponents";
 import styles from "../src/Searchbox.module.css";
 
 function Page() {
-  const [searchText, setSearchText] = React.useState("");
+  const [searchText] = React.useState("");
   const [scrollCounter, setScrollCounter] = React.useState(1);
   const [images, setImages] = React.useState([]);
 
@@ -27,15 +27,6 @@ function Page() {
       if (searchText.length > 0) setScrollCounter(scrollCounter + 1);
 
       setImages(images.concat(imgs));
-    })();
-  };
-
-  const fetchSearchData = () => {
-    setScrollCounter(1);
-    (async () => {
-      const imgs = await getSearchImages(searchText, 1);
-
-      setImages(imgs);
     })();
   };
 
